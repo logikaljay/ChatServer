@@ -14,6 +14,7 @@ import java.util.logging.*;
 
 import com.thoughtworks.xstream.*;
 import com.thoughtworks.xstream.converters.*;
+import com.thoughtworks.xstream.io.xml.DomDriver;
 
 public class AccountManager {
 	
@@ -22,7 +23,7 @@ public class AccountManager {
 	//Setup XStream
 	private static final XStream xstream;
 	static {
-		xstream = new XStream();
+		xstream = new XStream(new DomDriver());
 		
 		xstream.alias("account", ChatAccount.class);
 		
