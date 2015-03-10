@@ -14,6 +14,7 @@ import java.util.logging.*;
 import com.presence.chat.ChatPrefs;
 
 import com.thoughtworks.xstream.*;
+import com.thoughtworks.xstream.io.xml.DomDriver;
 import com.webobjects.foundation.NSNotificationCenter;
 
 public class PluginManager {
