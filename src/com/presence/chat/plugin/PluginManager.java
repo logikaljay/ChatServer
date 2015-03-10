@@ -14,6 +14,7 @@ import java.util.logging.*;
 import com.presence.chat.ChatPrefs;
 
 import com.thoughtworks.xstream.*;
+import com.thoughtworks.xstream.io.xml.DomDriver;
 import com.webobjects.foundation.NSNotificationCenter;
 
 public class PluginManager {
@@ -28,7 +29,7 @@ public class PluginManager {
 	public PluginManager() {
 		pluginsTable = new Hashtable<String, String>();
 		
-		xstream = new XStream();
+		xstream = new XStream(new DomDriver());
 		xstream.setClassLoader(getClassLoader());
 		xstream.autodetectAnnotations(true);
 		
