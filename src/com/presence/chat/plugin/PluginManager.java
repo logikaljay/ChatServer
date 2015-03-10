@@ -28,7 +28,7 @@ public class PluginManager {
 	public PluginManager() {
 		pluginsTable = new Hashtable<String, String>();
 		
-		xstream = new XStream();
+		xstream = new XStream(new DomDriver());
 		xstream.setClassLoader(getClassLoader());
 		xstream.autodetectAnnotations(true);
 		
